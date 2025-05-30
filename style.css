@@ -1,0 +1,154 @@
+/* Style général */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa; /* blanc cassé */
+  color: #2c2c2c; /* texte gris foncé */
+  margin: 0;
+  padding: 0 20px;
+}
+
+/* En-tête */
+header {
+  background-color: #1f3b4d; /* bleu nuit */
+  color: #ffffff;
+  text-align: center;
+  padding: 25px 10px;
+}
+
+/* Navigation principale */
+nav {
+  background-color: #1f3b4d; /* bleu nuit */
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Menu horizontal par défaut */
+#menu {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+#menu.hidden {
+  display: none;
+}
+
+/* Bouton menu caché par défaut */
+#menu-toggle {
+  display: none;
+  background-color: transparent;
+  border: none;
+}
+
+/* Sections */
+section {
+  background: #ffffff;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Titres des sections */
+section h2 {
+  color: #336699; /* bleu doux */
+  margin-top: 0;
+}
+
+/* Liste de projets */
+section ul {
+  padding-left: 20px;
+}
+section li {
+  margin-bottom: 8px;
+}
+
+/* Image de profil */
+.photo-profil {
+  width: 140px;
+  border-radius: 50%;
+  display: block;
+  margin: 10px auto;
+  border: 3px solid #336699;
+}
+
+/* Images et vidéos responsives */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive menu et éléments */
+@media (max-width: 768px) {
+  /* Affichage du bouton menu */
+  #menu-toggle {
+    display: block;
+    padding: 0;
+    margin: 10px auto;
+    background: none;
+    border: none;
+  }
+  #menu-toggle img {
+    height: 40px; /* Taille adaptée pour mobile */
+    width: auto;
+    display: block;
+  }
+
+  /* Menu vertical */
+  #menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+  }
+  #menu ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  #menu li {
+    margin: 10px 0;
+  }
+
+  /* Header et section plus compacts */
+  header {
+    padding: 15px 5px;
+  }
+  section {
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  /* Photo de profil plus petite */
+  .photo-profil {
+    width: 90px;
+  }
+
+  /* Vidéo responsive dans la section carrière football */
+  #carriere\ football video {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  nav {
+    padding: 5px;
+  }
+}
+
+/* Pour les très petits écrans */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.3em;
+  }
+  section h2 {
+    font-size: 1.1em;
+  }
+  .photo-profil {
+    width: 60px;
+  }
+}
